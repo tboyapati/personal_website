@@ -1,6 +1,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Mail, Phone, Linkedin, Github, Instagram } from "lucide-react";
+
 type TimelineSection = "Work Experience" | "Education";
 type TimelineIcon = "work" | "edu";
 
@@ -175,6 +177,46 @@ function CombinedTimeline({
     </section>
   );
 }
+
+
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  image?: string; // optional
+  href?: string;  // optional live link
+  github?: string; // optional github link
+};
+
+const projects: Project[] = [
+  {
+    title: "Finance Tracker",
+    description:
+      "Built a full-stack personal finance platform enabling structured storage, categorization, and retrieval of transaction data for analytics and insights.",
+    tags: ["RAG", "OCR", "LLMs", "MongoDB", "LangChain"],
+    // image: "/photos/img1.jpg",
+    href: "", // add later
+    github: "", // add later
+  },
+  {
+    title: "PDF Form Extraction Tool",
+    description:
+      "Extracts patient form fields and checkboxes using OpenCV + OCR, with grouping logic to map checked options to the correct question labels.",
+    tags: ["Python", "OpenCV", "Tesseract", "PDF", "NLP"],
+    // image: "/photos/img3.jpg",
+    href: "",
+    github: "",
+  },
+  {
+    title: "Brain-Based Prediction of tDCS Treatment Response",
+    description:
+      "Evaluated multiple brain connectivity representations and causal machine learning models (T-Learner, X-Learner, Causal Forests) to predict individualized treatment response from neuroimaging data under small-sample constraints.",
+    tags: ["GenAI", "UX", "LLMs", "React", "Education"],
+    // image: "/photos/img2.jpg",
+    href: "",
+    github: "",
+  },
+];
 
 export default function Home() {
   return (
@@ -363,22 +405,112 @@ export default function Home() {
       {/* PROJECTS */}
       <section id="projects" className="mt-24 scroll-mt-24 bg-neutral-950 py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-semibold text-white">
-            Projects <span className="text-emerald-300">•</span>
-          </h2>
-          <p className="mt-4 text-neutral-300">Coming soon.</p>
+          <div className="flex flex-col items-center">
+            <h2 className="text-3xl font-semibold text-white">Featured Projects</h2>
+            <div className="mt-3 h-1 w-20 rounded-full bg-emerald-400" />
+            <p className="mt-4 max-w-2xl text-center text-neutral-300">
+              A few projects focused on reliable AI systems, grounded GenAI, and practical tooling.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((p) => (
+              <div
+                key={p.title}
+                className="group overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/20 shadow-[0_0_0_1px_rgba(0,0,0,0.2)] transition hover:border-emerald-300/60"
+              >
+                {/* Image */}
+                <div className="relative h-44 w-full overflow-hidden bg-neutral-900">
+                  {p.image ? (
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                    />
+                  ) : (
+                    <div className="h-full w-full bg-gradient-to-br from-neutral-900 to-neutral-950" />
+                  )}
+                  {/* subtle overlay */}
+                  <div className="absolute inset-0 bg-neutral-950/20" />
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+                    {p.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-full border border-neutral-800 bg-neutral-950/40 px-3 py-1 text-xs text-neutral-200"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="mt-24 scroll-mt-24 bg-neutral-950 py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-semibold text-white">
-            Contact <span className="text-emerald-300">•</span>
+
+
+      <section id="contact" className="bg-neutral-950 py-32">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-emerald-300">
+            Contact
+          </p>
+
+          <h2 className="mt-4 text-4xl font-semibold text-white">
+            I’d Love To Hear From You
           </h2>
-          <p className="mt-4 text-neutral-300">Coming soon.</p>
+
+          <p className="mx-auto mt-6 max-w-xl text-neutral-400">
+            Feel free to reach out if you’d like to collaborate, chat about AI,
+            or just connect.
+          </p>
+
+          {/* Email + Phone */}
+          <div className="mt-16 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-8 hover:border-emerald-300/60">
+              <Mail className="mx-auto h-8 w-8 text-emerald-300" />
+              <p className="mt-4 text-sm uppercase tracking-widest text-neutral-400">
+                Email
+              </p>
+              <p className="mt-2 text-white">boyapatithanmayee@email.com</p>
+            </div>
+
+            <div className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-8 hover:border-emerald-300/60">
+              <Phone className="mx-auto h-8 w-8 text-emerald-300" />
+              <p className="mt-4 text-sm uppercase tracking-widest text-neutral-400">
+                Phone
+              </p>
+              <p className="mt-2 text-white">+1 (952)-454-3214</p>
+            </div>
+          </div>
+
+          {/* Socials */}
+          <div className="mt-14 flex justify-center gap-8">
+            <a href="https://linkedin.com/in/thanmayee-b-b13175233" target="_blank">
+              <Linkedin className="h-6 w-6 text-neutral-400 hover:text-emerald-300" />
+            </a>
+            <a href="https://github.com/tboyapati" target="_blank">
+              <Github className="h-6 w-6 text-neutral-400 hover:text-emerald-300" />
+            </a>
+            <a href="https://www.instagram.com/thanuboyapati/" target="_blank">
+              <Instagram className="h-6 w-6 text-neutral-400 hover:text-emerald-300" />
+            </a>
+          </div>
         </div>
       </section>
+
 
       <footer className="mt-28 border-t border-neutral-900 pt-10 text-sm text-neutral-500 text-center">
         © {new Date().getFullYear()} Thanmayee Boyapati
