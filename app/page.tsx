@@ -36,7 +36,7 @@ const timelineItems = [
   // ---- Education ----
   {
     section: "Education",
-    title:"B.S. Computer Science + Data Science, Minor: Statistics",
+    title: "B.S. Computer Science + Data Science, Minor: Statistics",
     org: "University of Minnesota – Twin Cities",
     date: "2022 – 2025",
     desc: "Focused on ML systems, data analytics, and applied statistics. Built projects spanning GenAI, RAG, and data pipelines.",
@@ -44,7 +44,7 @@ const timelineItems = [
   },
   {
     section: "Education",
-    title:"High School Diploma",
+    title: "High School Diploma",
     org: "Shakopee Senior High",
     date: "2021-2022",
     desc: "High Honors",
@@ -52,13 +52,13 @@ const timelineItems = [
   },
   {
     section: "Education",
-    title:"High School",
+    title: "High School",
     org: "Eagan Senior High",
     date: "2018-2021",
     desc: "From Grades 9-11 and transferred to Shakopee",
     icon: "edu",
   },
-]satisfies TimelineItem[];
+] satisfies TimelineItem[];
 
 function CombinedTimeline({
   id,
@@ -262,6 +262,35 @@ export default function Home() {
               Contact me
             </Link>
           </div>
+
+          {/* Socials (anchored near bottom) */}
+          <div className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2">
+            <div className="flex gap-10">
+              <a
+                href="https://linkedin.com/in/thanmayee-b-b13175233"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="h-6 w-6 text-white hover:text-emerald-300 transition" />
+              </a>
+
+              <a
+                href="https://github.com/tboyapati"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-6 w-6 text-white hover:text-emerald-300 transition" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/thanuboyapati/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="h-6 w-6 text-white hover:text-emerald-300 transition" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -279,7 +308,7 @@ export default function Home() {
               <div className="mx-auto w-full max-w-[320px]">
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-neutral-800">
                   <Image
-                    src="/photos/img2.jpg"
+                    src="/photos/img5.jpg"
                     alt="Thanmayee Boyapati"
                     fill
                     priority
