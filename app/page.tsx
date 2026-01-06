@@ -484,7 +484,7 @@ export default function Home() {
               <p className="mt-4 text-sm uppercase tracking-widest text-neutral-400">
                 Email
               </p>
-              <p className="mt-2 text-white">boyapatithanmayee@email.com</p>
+              <p className="mt-2 text-white">boyapatithanmayee@gmail.com</p>
             </div>
 
             <div className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-8 hover:border-emerald-300/60">
