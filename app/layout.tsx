@@ -19,17 +19,16 @@ export default function RootLayout({
             <div className="hidden items-center gap-4 text-lg text-neutral-200 md:flex">
               <Link href="/#home" className="hover:text-emerald-300">Home</Link>
               <Link href="/#about" className="hover:text-emerald-300">About</Link>
-              <Link href="/#experience" className="hover:text-emerald-300">Experience</Link>
+              <Link href="/#timeline" className="hover:text-emerald-300">Experience</Link>
               <Link href="/#projects" className="hover:text-emerald-300">Projects</Link>
-              <Link href="/#education" className="hover:text-emerald-300">Education</Link>
               <Link href="/#contact" className="hover:text-emerald-300">Contact</Link>
 
-              <Link
+              {/* <Link
                 href="/resume"
                 className="rounded-xl border border-neutral-700 px-3 py-1.5 hover:text-emerald-300"
               >
                 Resume
-              </Link>
+              </Link> */}
 
               {/* Blogs later */}
               {/* <Link href="/blog" className="hover:text-white">Blog</Link> */}
