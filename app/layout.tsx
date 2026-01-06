@@ -10,17 +10,16 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-neutral-950 text-neutral-100">
         <header className="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur">
-          <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
             <Link href="/" 
-            className="font-bold tracking-tight text-emerald-400 hover:text-emerald-300">
+            className="text-2xl font-extrabold tracking-tight text-emerald-400 hover:text-emerald-300">
               TB
             </Link>
 
-            <div className="hidden items-center gap-4 text-sm text-neutral-200 md:flex">
+            <div className="hidden items-center gap-4 text-lg text-neutral-200 md:flex">
               <Link href="/#home" className="hover:text-emerald-300">Home</Link>
               <Link href="/#about" className="hover:text-emerald-300">About</Link>
               <Link href="/#experience" className="hover:text-emerald-300">Experience</Link>
-              <Link href="/#skills" className="hover:text-emerald-300">Skills</Link>
               <Link href="/#projects" className="hover:text-emerald-300">Projects</Link>
               <Link href="/#education" className="hover:text-emerald-300">Education</Link>
               <Link href="/#contact" className="hover:text-emerald-300">Contact</Link>
