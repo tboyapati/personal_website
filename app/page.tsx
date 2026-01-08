@@ -380,8 +380,8 @@ export default function Home() {
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    I’m someone who loves learning, stays optimistic, and is very curios and determined. I value using my skills to make a positive impact beyond just code. 
-                    I am currently seeking full-time roles in Machine Learning Engineering, Applied AI, or Software Engineering (AI-focused) and I am open to Relocate.
+                    I’m someone who loves learning, stays optimistic, and is very curious and determined. I value using my skills to make a positive impact beyond just code. 
+                    I am currently seeking full-time roles in MLE, AI, or Software Engineering (AI-focused) and I am open to Relocate.
 
                   </p>
 
