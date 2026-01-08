@@ -177,7 +177,7 @@ const projects: Project[] = [
     title: "Finance Tracker",
     description:
       "Built a full-stack personal finance platform enabling structured storage, categorization, and retrieval of transaction data for analytics and insights.",
-    tags: ["RAG", "OCR", "LLMs", "MongoDB", "LangChain"],
+    tags: ["React", "Node.js", "Express","Tailwind CSS", "UI/UX", "MongoDB", "REST API", "Full-Stack"],
     image: "/photos/Finance_Tracker2.png",
     href: "", // add later
     github: "", // add later
