@@ -175,18 +175,16 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Finance Tracker",
-    description:
-      "Built a full-stack personal finance platform enabling structured storage, categorization, and retrieval of transaction data for analytics and insights.",
-    tags: ["React", "Node.js", "Express","Tailwind CSS", "UI/UX", "MongoDB", "REST API", "Full-Stack"],
+    description:"Built a full-stack personal finance tracker using React, Node.js, and Express with MongoDB for data storage. Implemented CRUD functionality with real-time balance summaries and category-based expense breakdowns.",
+    tags: ["React", "Node.js", "Express", "Tailwind CSS", "UI/UX", "MongoDB", "REST API", "Full-Stack", "Git"],
     image: "/photos/Finance_Tracker2.png",
     href: "", // add later
     github: "", // add later
   },
   {
-    title: "Brain-Based Prediction of tDCS Treatment Response",
-    description:
-      "Evaluated multiple brain connectivity representations and causal machine learning models (T-Learner, X-Learner, Causal Forests) to predict individualized treatment response from neuroimaging data under small-sample constraints.",
-    tags: ["GenAI", "UX", "LLMs", "React", "Education"],
+    title: "tDCS Treatment Response Prediction",
+    description:"Evaluated multiple brain connectivity representations and causal machine learning models (T-Learner, X-Learner, Causal Forests) to predict individualized treatment response from neuroimaging data.",
+    tags: ["Feature Engineering", "Causal Inference", "Functional Connectivity", "PyTorch", "Sckit-Learn"],
     image: "/photos/tDCS2.png",
     href: "",
     github: "",
@@ -200,6 +198,23 @@ const projects: Project[] = [
     href: "",
     github: "",
   },
+{
+  title: "VPN-Based Remote Robotics Interface",
+  description:
+    "Designed and deployed a site-to-site VPN enabling secure, reliable communication between autonomous robots and remote driver stations, supporting real-time operation and cross-team collaboration during testing and competitions.",
+  tags: [
+    "Networking",
+    "Site-to-Site VPN",
+    "Robotics Systems",
+    "Remote Operations",
+    "Linux",
+    "System Integration"
+  ],
+  image: "/photos/vpn2.png",
+  href: "", // add later
+  github: "", // add later
+},
+
 ];
 
 export default function Home() {
@@ -353,20 +368,20 @@ export default function Home() {
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    My experience spans generative AI, machine learning, data analytics, and full-stack development, with hands-on work designing and deploying end-to-end systems. 
-                    At Mayo Clinic, I built an AI-powered clinical question-answering system by integrating OCR, entity extraction, embedding-based retrieval, and LLM-based generation emphasizing reliability, evaluation, and grounded responses. 
+                    My experience spans generative AI, machine learning, data analytics, and full-stack development, with hands-on work designing and deploying end-to-end systems.
+                    At Mayo Clinic, I built an AI-powered clinical question-answering system by integrating OCR, entity extraction, embedding-based retrieval, and LLM-based generation emphasizing reliability, evaluation, and grounded responses.
                     Additionally I have worked on recommendation and personalization pipelines, applying ML and data-driven methods to improve content relevance and user experience.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    I also enjoy volunteering and giving back to the community. I serve as a Campus Representative for the National Center for Women & Information Technology (NCWIT), 
-                    where I connect with and support young women in STEM, helping them grow and stay confident in pursuing technical careers. I also volunteer with North STEM Bridge, 
+                    I also enjoy volunteering and giving back to the community. I serve as a Campus Representative for the National Center for Women & Information Technology (NCWIT),
+                    where I connect with and support young women in STEM, helping them grow and stay confident in pursuing technical careers. I also volunteer with North STEM Bridge,
                     working with underrepresented K–5 students to teach foundational STEM concepts in fun and engaging ways.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    I’m someone who loves learning, stays optimistic, and is driven by curiosity and determination. Giving back to the community is important to me, 
-                    and I value using my skills to make a positive impact beyond just code. I am currently seeking full-time roles in Machine Learning Engineering, 
+                    I’m someone who loves learning, stays optimistic, and is driven by curiosity and determination. Giving back to the community is important to me,
+                    and I value using my skills to make a positive impact beyond just code. I am currently seeking full-time roles in Machine Learning Engineering,
                     Applied AI, or Software Engineering (AI-focused) and I am open to Relocate.
 
                   </p>
@@ -427,45 +442,52 @@ export default function Home() {
             <div className="mt-3 h-1 w-20 rounded-full bg-emerald-400" />
           </div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Horizontal scroll row */}
+          <div
+            className="
+        mt-14 flex gap-8
+        overflow-x-auto pb-6
+        scroll-smooth
+        snap-x snap-mandatory
+        no-scrollbar
+      "
+          >
             {projects.map((p) => (
-              <div
-                key={p.title}
-                className="group overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/20 shadow-[0_0_0_1px_rgba(0,0,0,0.2)] transition hover:border-emerald-300/60"
-              >
-                {/* Image */}
-                <div className="relative h-44 w-full overflow-hidden bg-neutral-900">
-                  {p.image ? (
-                    <Image
-                      src={p.image}
-                      alt={p.title}
-                      fill
-                      className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                    />
-                  ) : (
-                    <div className="h-full w-full bg-gradient-to-br from-neutral-900 to-neutral-950" />
-                  )}
-                  {/* subtle overlay */}
-                  <div className="absolute inset-0 bg-neutral-950/20" />
-                </div>
+              <div key={p.title} className="snap-start shrink-0 w-[320px] sm:w-[380px] lg:w-[420px]">
+                <div className="group overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/20 shadow-[0_0_0_1px_rgba(0,0,0,0.2)] transition hover:border-emerald-300/60">
+                  {/* Image */}
+                  <div className="relative h-44 w-full overflow-hidden bg-neutral-900">
+                    {p.image ? (
+                      <Image
+                        src={p.image}
+                        alt={p.title}
+                        fill
+                        className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                      />
+                    ) : (
+                      <div className="h-full w-full bg-gradient-to-br from-neutral-900 to-neutral-950" />
+                    )}
+                    <div className="absolute inset-0 bg-neutral-950/20" />
+                  </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                    {p.description}
-                  </p>
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+                      {p.description}
+                    </p>
 
-                  {/* Tags */}
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full border border-neutral-800 bg-neutral-950/40 px-3 py-1 text-xs text-neutral-200"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                    {/* Tags */}
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {p.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="rounded-full border border-neutral-800 bg-neutral-950/40 px-3 py-1 text-xs text-neutral-200"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -473,6 +495,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
 
 
