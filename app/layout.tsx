@@ -23,12 +23,12 @@ export default function RootLayout({
               <Link href="/#projects" className="hover:text-emerald-300">Projects</Link>
               <Link href="/#contact" className="hover:text-emerald-300">Contact</Link>
 
-              {/* <Link
+              <Link
                 href="/resume"
                 className="rounded-xl border border-neutral-700 px-3 py-1.5 hover:text-emerald-300"
               >
                 Resume
-              </Link> */}
+              </Link>
 
               {/* Blogs later */}
               {/* <Link href="/blog" className="hover:text-white">Blog</Link> */}

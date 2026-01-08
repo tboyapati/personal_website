@@ -27,7 +27,7 @@ const timelineItems = [
   {
     section: "Work Experience",
     title: "HCI Researcher (GenAI)",
-    org: "University of Minnesota",
+    org: "Group Lens Lab",
     date: "2024 – 2025",
     desc: "Developed and evaluated a personalized news recommendation pipeline, experimenting with topic and locality calibration and designing GPT-Prompts to improve relevance while reducing over-personalization and filter-bubble effects.",
     icon: "work",
@@ -175,7 +175,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Finance Tracker",
-    description:"Built a full-stack personal finance tracker using React, Node.js, and Express with MongoDB for data storage. Implemented CRUD functionality with real-time balance summaries and category-based expense breakdowns.",
+    description: "Built a full-stack personal finance tracker using React, Node.js, and Express with MongoDB for data storage. Implemented CRUD functionality with real-time balance summaries and category-based expense breakdowns.",
     tags: ["React", "Node.js", "Express", "Tailwind CSS", "UI/UX", "MongoDB", "REST API", "Full-Stack", "Git"],
     image: "/photos/Finance_Tracker2.png",
     href: "", // add later
@@ -183,7 +183,7 @@ const projects: Project[] = [
   },
   {
     title: "tDCS Treatment Response Prediction",
-    description:"Evaluated multiple brain connectivity representations and causal machine learning models (T-Learner, X-Learner, Causal Forests) to predict individualized treatment response from neuroimaging data.",
+    description: "Evaluated multiple brain connectivity representations and causal machine learning models (T-Learner, X-Learner, Causal Forests) to predict individualized treatment response from neuroimaging data.",
     tags: ["Feature Engineering", "Causal Inference", "Functional Connectivity", "PyTorch", "Sckit-Learn"],
     image: "/photos/tDCS2.png",
     href: "",
@@ -198,22 +198,22 @@ const projects: Project[] = [
     href: "",
     github: "",
   },
-{
-  title: "VPN-Based Remote Robotics Interface",
-  description:
-    "Designed and deployed a site-to-site VPN enabling secure, reliable communication between autonomous robots and remote driver stations, supporting real-time operation and cross-team collaboration during testing and competitions.",
-  tags: [
-    "Networking",
-    "Site-to-Site VPN",
-    "Robotics Systems",
-    "Remote Operations",
-    "Linux",
-    "System Integration"
-  ],
-  image: "/photos/vpn2.png",
-  href: "", // add later
-  github: "", // add later
-},
+  {
+    title: "VPN-Based Remote Robotics Interface",
+    description:
+      "Designed and deployed a site-to-site VPN enabling secure, reliable communication between autonomous robots and remote driver stations, supporting real-time operation and cross-team collaboration during testing and competitions.",
+    tags: [
+      "Networking",
+      "Site-to-Site VPN",
+      "Robotics Systems",
+      "Remote Operations",
+      "Linux",
+      "System Integration"
+    ],
+    image: "/photos/vpn2.png",
+    href: "", // add later
+    github: "", // add later
+  },
 
 ];
 
@@ -249,8 +249,8 @@ export default function Home() {
           </h1>
 
           <p className="mt-5 max-w-2xl text-base font-medium tracking-wide text-neutral-200 sm:text-lg">
-            AI Engineer <span className="mx-3 text-neutral-400">|</span> Applied ML{" "}
-            <span className="mx-3 text-neutral-400">|</span> GenAI
+            AI Engineer <span className="mx-3 text-neutral-400">|</span> Applied MLE{" "}
+            <span className="mx-3 text-neutral-400">|</span> SWE
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -369,20 +369,19 @@ export default function Home() {
 
                   <p className="mt-4 leading-relaxed text-white">
                     My experience spans generative AI, machine learning, data analytics, and full-stack development, with hands-on work designing and deploying end-to-end systems.
-                    At Mayo Clinic, I built an AI-powered clinical question-answering system by integrating OCR, entity extraction, embedding-based retrieval, and LLM-based generation emphasizing reliability, evaluation, and grounded responses.
+                    At Mayo Clinic, I built an AI-powered clinical question-answering system by integrating OCR, entity extraction, embedding-based retrieval, and LLM-based generation.
                     Additionally I have worked on recommendation and personalization pipelines, applying ML and data-driven methods to improve content relevance and user experience.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    I also enjoy volunteering and giving back to the community. I serve as a Campus Representative for the National Center for Women & Information Technology (NCWIT),
-                    where I connect with and support young women in STEM, helping them grow and stay confident in pursuing technical careers. I also volunteer with North STEM Bridge,
+                    I also enjoy volunteering and giving back to the community. I am a Campus Representative for the National Center for Women & Information Technology (NCWIT),
+                    where I connect with and support young women in STEM, helping them grow and stay confident in pursuing careers in the Tech Field. I also volunteer with North STEM Bridge,
                     working with underrepresented K–5 students to teach foundational STEM concepts in fun and engaging ways.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    I’m someone who loves learning, stays optimistic, and is driven by curiosity and determination. Giving back to the community is important to me,
-                    and I value using my skills to make a positive impact beyond just code. I am currently seeking full-time roles in Machine Learning Engineering,
-                    Applied AI, or Software Engineering (AI-focused) and I am open to Relocate.
+                    I’m someone who loves learning, stays optimistic, and is very curios and determined. I value using my skills to make a positive impact beyond just code. 
+                    I am currently seeking full-time roles in Machine Learning Engineering, Applied AI, or Software Engineering (AI-focused) and I am open to Relocate.
 
                   </p>
 
@@ -548,9 +547,8 @@ export default function Home() {
         </div>
       </section>
 
-
       <footer className="mt-28 border-t border-neutral-900 pt-10 text-sm text-neutral-500 text-center">
-        © {new Date().getFullYear()} Thanmayee Boyapati
+        Built with Next.js & Tailwind • © 2026 Thanmayee Boyapati
       </footer>
     </main>
   );
