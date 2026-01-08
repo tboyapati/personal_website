@@ -18,7 +18,7 @@ const timelineItems = [
   // ---- Work Experience ----
   {
     section: "Work Experience",
-    title: "AI Engineering Intern(BioStatistian Department)",
+    title: "AI Engineering Intern (BioStatistian Department)",
     org: "Mayo Clinic",
     date: "Jun 2025 – Dec 2025",
     desc: "Built a genomics-focused question-answering system integrating OCR, entity extraction, embedding-based retrieval, and LLM generation for grounded responses.",
@@ -29,7 +29,7 @@ const timelineItems = [
     title: "HCI Researcher (GenAI)",
     org: "University of Minnesota",
     date: "2024 – 2025",
-    desc: "Designed GenAI prompts and created relevance evaluation systems to improve grounded generation and user experience.",
+    desc: "Developed and evaluated a personalized news recommendation pipeline, experimenting with topic and locality calibration and designing GPT-Prompts to improve relevance while reducing over-personalization and filter-bubble effects.",
     icon: "work",
   },
 
@@ -40,22 +40,6 @@ const timelineItems = [
     org: "University of Minnesota – Twin Cities",
     date: "2022 – 2025",
     desc: "Focused on ML systems, data analytics, and applied statistics. Built projects spanning GenAI, RAG, and data pipelines.",
-    icon: "edu",
-  },
-  {
-    section: "Education",
-    title: "High School Diploma",
-    org: "Shakopee Senior High",
-    date: "2021-2022",
-    desc: "High Honors",
-    icon: "edu",
-  },
-  {
-    section: "Education",
-    title: "High School",
-    org: "Eagan Senior High",
-    date: "2018-2021",
-    desc: "From Grades 9-11 and transferred to Shakopee",
     icon: "edu",
   },
 ] satisfies TimelineItem[];
@@ -194,25 +178,25 @@ const projects: Project[] = [
     description:
       "Built a full-stack personal finance platform enabling structured storage, categorization, and retrieval of transaction data for analytics and insights.",
     tags: ["RAG", "OCR", "LLMs", "MongoDB", "LangChain"],
-    // image: "/photos/img1.jpg",
+    image: "/photos/Finance_Tracker2.png",
     href: "", // add later
     github: "", // add later
-  },
-  {
-    title: "PDF Form Extraction Tool",
-    description:
-      "Extracts patient form fields and checkboxes using OpenCV + OCR, with grouping logic to map checked options to the correct question labels.",
-    tags: ["Python", "OpenCV", "Tesseract", "PDF", "NLP"],
-    // image: "/photos/img3.jpg",
-    href: "",
-    github: "",
   },
   {
     title: "Brain-Based Prediction of tDCS Treatment Response",
     description:
       "Evaluated multiple brain connectivity representations and causal machine learning models (T-Learner, X-Learner, Causal Forests) to predict individualized treatment response from neuroimaging data under small-sample constraints.",
     tags: ["GenAI", "UX", "LLMs", "React", "Education"],
-    // image: "/photos/img2.jpg",
+    image: "/photos/tDCS2.png",
+    href: "",
+    github: "",
+  },
+  {
+    title: "RegEx Based Parsing",
+    description:
+      "OCR-driven regex parsing system that transforms unstructured medical PDFs into structured JSON by extracting visa authorization, USMLE exam outcomes, and ECFMG certification data.",
+    tags: ["Python", "OCR", "Tesseract", "Regex", "PDF Parsing", "Information Extraction"],
+    image: "/photos/RegEx.png",
     href: "",
     github: "",
   },
@@ -227,7 +211,7 @@ export default function Home() {
         className="relative min-h-[calc(100vh-72px)] overflow-hidden rounded-3xl border border-neutral-800"
       >
         <Image
-          src="/photos/Backgroundimg.jpg"
+          src="/photos/Backgroundimg2.jpg"
           alt="Background"
           fill
           priority
@@ -338,6 +322,9 @@ export default function Home() {
                       "OCR",
                       "Pandas",
                       "Matplotlib",
+                      "R",
+                      "Tableau",
+                      "AWS",
                     ].map((s) => (
                       <span
                         key={s}
@@ -362,25 +349,26 @@ export default function Home() {
               <div className="grid gap-8">
                 <div>
                   <p className="mt-3 leading-relaxed text-white">
-                    I’m a Computer Science & Data Science student who builds
-                    production-minded AI systems — from data pipelines and retrieval
-                    to evaluation and integration. I care a lot about reliability:
-                    what a model does when the input is messy, the context is
-                    incomplete, or the metric doesn’t tell the full story.
+                    I am a Computer Science and Data Science graduate with a strong focus on generative AI, machine learning, and data-driven systems.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    Recently, I worked on a genomics-focused question-answering system
-                    using OCR, entity extraction, embedding-based retrieval, and LLM
-                    generation to produce grounded responses to clinical-style
-                    queries. I’m especially interested in grounded GenAI (RAG),
-                    evaluation, and real-world performance.
+                    My experience spans generative AI, machine learning, data analytics, and full-stack development, with hands-on work designing and deploying end-to-end systems. 
+                    At Mayo Clinic, I built an AI-powered clinical question-answering system by integrating OCR, entity extraction, embedding-based retrieval, and LLM-based generation emphasizing reliability, evaluation, and grounded responses. 
+                    Additionally I have worked on recommendation and personalization pipelines, applying ML and data-driven methods to improve content relevance and user experience.
                   </p>
 
                   <p className="mt-4 leading-relaxed text-white">
-                    Outside of work, I enjoy mentoring and STEM community-building —
-                    I’ve taught Arduino programming and helped promote opportunities
-                    for women in tech through campus leadership.
+                    I also enjoy volunteering and giving back to the community. I serve as a Campus Representative for the National Center for Women & Information Technology (NCWIT), 
+                    where I connect with and support young women in STEM, helping them grow and stay confident in pursuing technical careers. I also volunteer with North STEM Bridge, 
+                    working with underrepresented K–5 students to teach foundational STEM concepts in fun and engaging ways.
+                  </p>
+
+                  <p className="mt-4 leading-relaxed text-white">
+                    I’m someone who loves learning, stays optimistic, and is driven by curiosity and determination. Giving back to the community is important to me, 
+                    and I value using my skills to make a positive impact beyond just code. I am currently seeking full-time roles in Machine Learning Engineering, 
+                    Applied AI, or Software Engineering (AI-focused) and I am open to Relocate.
+
                   </p>
 
                   {/* Focus Areas */}
@@ -435,11 +423,8 @@ export default function Home() {
       <section id="projects" className="mt-24 scroll-mt-24 bg-neutral-950 py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center">
-            <h2 className="text-3xl font-semibold text-white">Featured Projects</h2>
+            <h2 className="text-3xl font-semibold text-white">My Projects</h2>
             <div className="mt-3 h-1 w-20 rounded-full bg-emerald-400" />
-            <p className="mt-4 max-w-2xl text-center text-neutral-300">
-              A few projects focused on reliable AI systems, grounded GenAI, and practical tooling.
-            </p>
           </div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
