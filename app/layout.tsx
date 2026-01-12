@@ -16,7 +16,7 @@ export default function RootLayout({
               TB
             </Link>
 
-            <div className="hidden items-center gap-4 text-lg text-neutral-200 md:flex">
+            <div className="flex items-center gap-4 text-lg text-neutral-200">
               <Link href="/#home" className="hover:text-emerald-300">Home</Link>
               <Link href="/#about" className="hover:text-emerald-300">About</Link>
               <Link href="/#timeline" className="hover:text-emerald-300">Experience</Link>
