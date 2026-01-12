@@ -15,8 +15,11 @@ export default function RootLayout({
             className="text-2xl font-extrabold tracking-tight text-emerald-400 hover:text-emerald-300">
               TB
             </Link>
+            <button className="md:hidden text-neutral-200">
+              ☰
+            </button>
 
-            <div className="flex items-center gap-4 text-lg text-neutral-200">
+            <div className="hidden items-center gap-4 text-lg text-neutral-200 md:flex">
               <Link href="/#home" className="hover:text-emerald-300">Home</Link>
               <Link href="/#about" className="hover:text-emerald-300">About</Link>
               <Link href="/#timeline" className="hover:text-emerald-300">Experience</Link>
