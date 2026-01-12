@@ -51,9 +51,10 @@ export default function RootLayout({
           {/* Mobile menu (right drawer) */}
           <div
             className={`fixed top-0 right-0 z-50 h-screen w-64 bg-neutral-950 border-l border-neutral-800
-    transform transition-transform duration-300 ease-in-out
+    transform transition-transform duration-300 ease-in-out md:hidden
     ${open ? "translate-x-0" : "translate-x-full"}`}
           >
+
             {/* Close button */}
             <div className="flex justify-end p-6">
               <button
