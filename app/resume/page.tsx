@@ -15,7 +15,7 @@ export default function ResumePage() {
           </p>
 
           <a
-            href="/ThanmayeeBResume.pdf"
+            href="/BThanmayeeResume.pdf"
             download
             className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black hover:text-emerald-300 transition"
           >

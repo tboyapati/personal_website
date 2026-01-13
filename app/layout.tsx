@@ -3,6 +3,7 @@
 import "./globals.css";
 import Link from "next/link";
 import { useState } from "react";
+import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({
   children,
