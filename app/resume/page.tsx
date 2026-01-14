@@ -26,7 +26,7 @@ export default function ResumePage() {
         {/* PDF Viewer */}
         <div className="mt-14 overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/20">
           <iframe
-            src="/ThanmayeeBResumeJan12.pdf"
+            src="/BThanmayeeResume.pdf"
             className="h-[900px] w-full"
             title="Resume PDF"
           />
